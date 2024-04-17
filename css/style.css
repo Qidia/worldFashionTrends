@@ -1,0 +1,164 @@
+:root {
+  --text-color: rgb(24, 25, 31);
+  --perfume-color: rgb(160, 220, 255);
+  --lipstick-color: rgb(255, 195, 216);
+  --faceWash-color: rgb(193, 229, 192);
+}
+
+body {
+  font-family: "Manrope", "Tahoma", sans-serif;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: justify;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 64px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.container-trends {
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.container-trends h1 {
+  margin: 0 auto;
+  width: 540px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* trends-left */
+.trends-left {
+  width: 540px;
+  height: 627px;
+  position: relative;
+}
+
+.trends-left img {
+  width: auto;
+  position: relative;
+}
+
+.p-a {
+  position: absolute;
+}
+
+.img-perfume {
+  top: 0;
+  right: 31px;
+}
+
+.img-lipstick {
+  bottom: 98px;
+  left: 33px;
+}
+
+.img-faceWash {
+  bottom: 27px;
+  right: 134px;
+}
+
+.img-perfume::before,
+.img-lipstick::before,
+.img-faceWash::before {
+  content: "";
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+}
+
+.img-perfume::before {
+  bottom: 62px;
+  right: -31px;
+  background: var(--perfume-color);
+}
+
+.img-lipstick::before {
+  bottom: 65px;
+  left: -33px;
+  background: var(--lipstick-color);
+}
+
+.img-faceWash::before {
+  width: 56px;
+  height: 56px;
+  bottom: -27px;
+  right: -27px;
+  border-radius: 30px;
+  background: var(--faceWash-color);
+}
+
+/* trends-right */
+.trends-right {
+  width: 540px;
+  height: 584px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-perfume,
+.text-lipstick,
+.text-faceWash {
+  width: 444px;
+}
+
+.trends-right h3 {
+  position: relative;
+  margin-left: 16px;
+}
+
+.text-perfume h3::before,
+.text-lipstick h3::before,
+.text-faceWash h3::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 3px);
+  left: -15px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.text-perfume h3::before {
+  background: var(--perfume-color);
+}
+
+.text-lipstick h3::before {
+  background: var(--lipstick-color);
+}
+
+.text-faceWash h3::before {
+  background: var(--faceWash-color);
+}
